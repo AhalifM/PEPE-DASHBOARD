@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { 
-  BarChart, PieChart, BarChart3, Wallet, LineChart, Globe, 
-  DollarSign, Settings, ChevronRight, ChevronLeft, Home
+  UserCheck, MessageSquare, Receipt, Database, Users, 
+  TrendingUp, Settings, ChevronRight, ChevronLeft, Home
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -31,39 +31,34 @@ export function Sidebar({ isCollapsed, onToggle, className }: SidebarProps) {
       href: '/',
     },
     {
-      title: 'Stocks',
-      icon: BarChart,
-      href: '/stocks',
+      title: 'User Onboarding',
+      icon: UserCheck,
+      href: '/onboarding',
     },
     {
-      title: 'Markets',
-      icon: BarChart3,
-      href: '/markets',
+      title: 'Chat Orders',
+      icon: MessageSquare,
+      href: '/chat-orders',
     },
     {
-      title: 'Currencies',
-      icon: DollarSign,
-      href: '/currencies',
+      title: 'Invoicing',
+      icon: Receipt,
+      href: '/invoicing',
     },
     {
-      title: 'Global',
-      icon: Globe,
-      href: '/global',
+      title: 'Transactions',
+      icon: Database,
+      href: '/transactions',
     },
     {
-      title: 'Portfolio',
-      icon: Wallet,
-      href: '/portfolio',
+      title: 'crmPEPE',
+      icon: Users,
+      href: '/crm',
     },
     {
-      title: 'Performance',
-      icon: LineChart,
-      href: '/performance',
-    },
-    {
-      title: 'Analysis',
-      icon: PieChart,
-      href: '/analysis',
+      title: 'creditPEPE',
+      icon: TrendingUp,
+      href: '/credit',
     },
     {
       title: 'Settings',
@@ -83,7 +78,7 @@ export function Sidebar({ isCollapsed, onToggle, className }: SidebarProps) {
           "font-semibold tracking-tight transition-opacity duration-200",
           isCollapsed ? "opacity-0" : "opacity-100"
         )}>
-          MarketPulse
+          BusinessPEPE
         </h2>
         
         <Button
@@ -131,9 +126,9 @@ export function Sidebar({ isCollapsed, onToggle, className }: SidebarProps) {
           "transition-opacity duration-200 rounded-md bg-sidebar-accent/50 p-2 text-xs text-sidebar-accent-foreground",
           isCollapsed ? "opacity-0" : "opacity-100"
         )}>
-          <p className="font-medium">Market Status</p>
-          <p>Markets are open</p>
-          <p className="text-[10px]">Closes in 3h 45m</p>
+          <p className="font-medium">Business Status</p>
+          <p>Ready for orders</p>
+          <p className="text-[10px]">SSM verified</p>
         </div>
       </div>
     </aside>
