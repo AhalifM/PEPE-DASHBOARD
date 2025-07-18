@@ -4,40 +4,45 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BusinessProvider } from "@/contexts/BusinessContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Stocks from "./pages/Stocks";
-import Markets from "./pages/Markets";
-import Currencies from "./pages/Currencies";
-import Global from "./pages/Global";
-import Portfolio from "./pages/Portfolio";
-import Performance from "./pages/Performance";
-import Analysis from "./pages/Analysis";
+import Onboarding from "./pages/Onboarding";
+import Dashboard from "./pages/Dashboard";
+import Orders from "./pages/Orders";
+import Invoicing from "./pages/Invoicing";
+import Transactions from "./pages/Transactions";
+import CrmPepe from "./pages/CrmPepe";
+import CreditPepe from "./pages/CreditPepe";
 import Settings from "./pages/Settings";
+import DataGenerator from "./pages/DataGenerator";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/stocks" element={<Stocks />} />
-          <Route path="/markets" element={<Markets />} />
-          <Route path="/currencies" element={<Currencies />} />
-          <Route path="/global" element={<Global />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/performance" element={<Performance />} />
-          <Route path="/analysis" element={<Analysis />} />
-          <Route path="/settings" element={<Settings />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <BusinessProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/onboarding" element={<Onboarding />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/invoicing" element={<Invoicing />} />
+            <Route path="/transactions" element={<Transactions />} />
+            <Route path="/crm-pepe" element={<CrmPepe />} />
+            <Route path="/credit-pepe" element={<CreditPepe />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/data-generator" element={<DataGenerator />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </BusinessProvider>
   </QueryClientProvider>
 );
 

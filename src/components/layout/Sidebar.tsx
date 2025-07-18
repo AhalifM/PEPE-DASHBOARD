@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { 
-  BarChart, PieChart, BarChart3, Wallet, LineChart, Globe, 
-  DollarSign, Settings, ChevronRight, ChevronLeft, Home
+  Home, Building2, MessageSquare, FileText, CreditCard, 
+  Users, BarChart3, Settings, ChevronRight, ChevronLeft, Star, Database
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -28,42 +28,42 @@ export function Sidebar({ isCollapsed, onToggle, className }: SidebarProps) {
     {
       title: 'Dashboard',
       icon: Home,
-      href: '/',
+      href: '/dashboard',
     },
     {
-      title: 'Stocks',
-      icon: BarChart,
-      href: '/stocks',
+      title: 'Business Onboarding',
+      icon: Building2,
+      href: '/onboarding',
     },
     {
-      title: 'Markets',
+      title: 'Chat Orders',
+      icon: MessageSquare,
+      href: '/orders',
+    },
+    {
+      title: 'e-Invoicing',
+      icon: FileText,
+      href: '/invoicing',
+    },
+    {
+      title: 'Transactions',
+      icon: CreditCard,
+      href: '/transactions',
+    },
+    {
+      title: 'crmPEPE',
+      icon: Users,
+      href: '/crm-pepe',
+    },
+    {
+      title: 'creditPEPE',
       icon: BarChart3,
-      href: '/markets',
+      href: '/credit-pepe',
     },
     {
-      title: 'Currencies',
-      icon: DollarSign,
-      href: '/currencies',
-    },
-    {
-      title: 'Global',
-      icon: Globe,
-      href: '/global',
-    },
-    {
-      title: 'Portfolio',
-      icon: Wallet,
-      href: '/portfolio',
-    },
-    {
-      title: 'Performance',
-      icon: LineChart,
-      href: '/performance',
-    },
-    {
-      title: 'Analysis',
-      icon: PieChart,
-      href: '/analysis',
+      title: 'Data Generator',
+      icon: Database,
+      href: '/data-generator',
     },
     {
       title: 'Settings',
@@ -80,10 +80,10 @@ export function Sidebar({ isCollapsed, onToggle, className }: SidebarProps) {
     )}>
       <div className="flex h-16 items-center justify-center border-b border-sidebar-border">
         <h2 className={cn(
-          "font-semibold tracking-tight transition-opacity duration-200",
+          "font-semibold tracking-tight transition-opacity duration-200 text-lg",
           isCollapsed ? "opacity-0" : "opacity-100"
         )}>
-          MarketPulse
+          PEPE Platform
         </h2>
         
         <Button
@@ -131,9 +131,9 @@ export function Sidebar({ isCollapsed, onToggle, className }: SidebarProps) {
           "transition-opacity duration-200 rounded-md bg-sidebar-accent/50 p-2 text-xs text-sidebar-accent-foreground",
           isCollapsed ? "opacity-0" : "opacity-100"
         )}>
-          <p className="font-medium">Market Status</p>
-          <p>Markets are open</p>
-          <p className="text-[10px]">Closes in 3h 45m</p>
+          <p className="font-medium">Business Status</p>
+          <p>Platform Online</p>
+          <p className="text-[10px]">All systems operational</p>
         </div>
       </div>
     </aside>
