@@ -1,69 +1,157 @@
-# Welcome to your Lovable project
+# PEPE Business Platform
 
-## Project info
+A comprehensive business management platform designed for Malaysian businesses, providing seamless integration from SSM registration to payment processing and business operations.
 
-**URL**: https://lovable.dev/projects/a8baea9a-97ae-4008-b023-5de63357c0e2
+## 🚀 Features
 
-## How can I edit this code?
+### Business Onboarding
+- **SSM Registration Integration**: Automated verification of Malaysian business SSM numbers
+- **Business Verification**: Complete KYB (Know Your Business) documentation process
+- **Wallet Setup**: Integrated payment processing and business wallet management
+- **Progress Tracking**: Visual step-by-step onboarding progress
 
-There are several ways of editing your application.
+### Platform Capabilities
+- Complete business management dashboard
+- Payment processing integration
+- Order management system
+- Business analytics and reporting
+- Mobile-responsive design
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a8baea9a-97ae-4008-b023-5de63357c0e2) and start prompting.
+- **Frontend**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS + shadcn/ui components
+- **Package Manager**: Bun
+- **UI Components**: Radix UI primitives
+- **Icons**: Lucide React
+- **Development**: ESLint for code quality
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📁 Project Structure
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/
+│   ├── ui/              # Reusable UI components (shadcn/ui)
+│   ├── layout/          # Layout components
+│   └── dev/             # Development components
+├── pages/
+│   └── Onboarding.tsx   # Business onboarding flow
+├── contexts/
+│   └── BusinessContext.tsx # Business state management
+├── hooks/               # Custom React hooks
+├── lib/                 # Utility libraries
+└── utils/               # Helper functions
 ```
 
-**Edit a file directly in GitHub**
+## 🚀 Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
 
-**Use GitHub Codespaces**
+- Node.js (v18 or higher)
+- Bun package manager
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Installation
 
-## What technologies are used for this project?
+1. **Clone the repository**
+```bash
+git clone <repository-url>
+cd market-mosaic-online-417
+```
 
-This project is built with .
+2. **Install dependencies**
+```bash
+bun install
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. **Start development server**
+```bash
+bun run dev
+```
 
-## How can I deploy this project?
+4. **Open your browser**
+Navigate to `http://localhost:5173`
 
-Simply open [Lovable](https://lovable.dev/projects/a8baea9a-97ae-4008-b023-5de63357c0e2) and click on Share -> Publish.
+## 📜 Available Scripts
 
-## I want to use a custom domain - is that possible?
+- `bun run dev` - Start development server with hot reload
+- `bun run build` - Build for production
+- `bun run build:dev` - Build in development mode
+- `bun run lint` - Run ESLint for code quality
+- `bun run preview` - Preview production build locally
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## 🏢 Business Onboarding Flow
+
+The platform features a comprehensive 4-step onboarding process:
+
+### Step 1: SSM Registration
+- Enter Malaysian SSM registration number
+- Automatic business details verification
+- Real-time validation and data fetching
+
+### Step 2: Business Verification
+- Upload required business documents
+- Identity verification process
+- Compliance checks
+
+### Step 3: KYB Completion
+- Know Your Business documentation
+- Enhanced due diligence
+- Risk assessment
+
+### Step 4: Wallet Setup
+- Business payment wallet creation
+- Payment method integration
+- Transaction capabilities activation
+
+## 🎨 UI Components
+
+Built with shadcn/ui for consistent, accessible design:
+
+- **Cards**: Information display and form containers
+- **Buttons**: Primary actions with brand colors (#e03b6d)
+- **Forms**: Input fields with validation
+- **Badges**: Status indicators
+- **Icons**: Lucide React icon set
+
+## 🔧 Configuration Files
+
+- `vite.config.ts` - Vite build configuration
+- `tailwind.config.ts` - Tailwind CSS customization
+- `tsconfig.json` - TypeScript configuration
+- `eslint.config.js` - ESLint rules
+- `components.json` - shadcn/ui configuration
+
+### Supported Platforms
+- Netlify
+- Vercel
+- AWS S3 + CloudFront
+- Firebase Hosting
+- Any static hosting service
+
+## 🔐 Environment Setup
+
+Create a `.env` file for environment variables:
+
+```env
+VITE_API_URL=your_api_endpoint
+VITE_SSM_API_KEY=your_ssm_api_key
+VITE_PAYMENT_API_KEY=your_payment_api_key
+```
+
+## 📱 Mobile Support
+
+The platform is fully responsive and optimized for:
+- Desktop (1024px+)
+- Tablet (768px - 1023px)
+- Mobile (320px - 767px)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+
